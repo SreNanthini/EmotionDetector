@@ -3,20 +3,12 @@ import joblib
 import re
 import nltk
 from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
-import nltk
 import os
 
+# Download NLTK stopwords
 nltk_data_dir = os.path.join(os.path.expanduser("~"), "nltk_data")
-nltk.download("punkt", download_dir=nltk_data_dir)
 nltk.download("stopwords", download_dir=nltk_data_dir)
-
-# Set environment path
 nltk.data.path.append(nltk_data_dir)
-
-
-nltk.download('punkt')
-nltk.download('stopwords')
 
 # Load saved model and vectorizer
 model = joblib.load("emotion_model.pkl")
@@ -28,7 +20,7 @@ stop_words = set(stopwords.words("english"))
 def preprocess(text):
     text = text.lower()
     text = re.sub(r'[^a-zA-Z\s]', '', text)
-    tokens = word_tokenize(text)
+    tokens = text.split()  # No punkt/tokenizer issues
     filtered = [word for word in tokens if word not in stop_words]
     return ' '.join(filtered)
 
@@ -46,4 +38,3 @@ if st.button("Detect Emotion"):
         vectorized = vectorizer.transform([clean])
         prediction = model.predict(vectorized)[0]
         st.success(f"Predicted Emotion: **{prediction.upper()}**")
- 
