@@ -63,6 +63,12 @@ Then open [http://localhost:8501](http://localhost:8501) in your browser.
 - `README.md` – Project documentation
 - `output` –Sample screenshots
 - `archive.zip` – Dataset used
+- `requirements.txt` –Required libraries to import
+
+### 🚀 Deployed web app
+
+
+ [Click here](https://emotiondetectorbytext.streamlit.app/) 
 
 
 ## 🌟 Outcome
@@ -70,7 +76,7 @@ Then open [http://localhost:8501](http://localhost:8501) in your browser.
 - A fast and lightweight emotion classifier with real-time UI
 - Can be used in chatbots, feedback analyzers, or mental health tools
 
-## Future Enhancements
+## 📌 Future Enhancements
 - Upgrade to BERT or LSTM for better accuracy
 - Add more emotions like neutral or frustration
 
