@@ -60,7 +60,9 @@ Then open [http://localhost:8501](http://localhost:8501) in your browser.
 - `emotion_model.pkl` – Trained ML model  
 - `tfidf_vectorizer.pkl` – TF-IDF vectorizer  
 - `emotion.csv` – Dataset used for training  
-- `README.md` – Project documentation  
+- `README.md` – Project documentation
+- `output` –Sample screenshots
+- `archive.zip` – Dataset used
 
 
 ## 🌟 Outcome
